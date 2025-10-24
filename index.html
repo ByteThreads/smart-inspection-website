@@ -77,6 +77,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            z-index: 1000;
         }
 
         nav ul {
@@ -94,6 +95,36 @@
 
         nav a:hover {
             color: #5E80FF;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1000;
+            padding: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         /* Hero Section */
@@ -506,8 +537,70 @@
             color: #888;
         }
 
+        /* Scroll Animation */
+        .scroll-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            header {
+                padding: 0;
+            }
+
+            nav {
+                padding: 0.75rem 0;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                gap: 0;
+                padding: 5rem 2rem 2rem;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav ul li {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            nav a {
+                font-size: 1.1rem;
+                display: block;
+            }
+
             .hero {
                 min-height: 80vh;
             }
@@ -519,15 +612,16 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
-            nav ul {
-                gap: 1rem;
+            .cta-button {
+                font-size: 1rem;
+                padding: 1rem 2rem;
             }
 
             .feature-grid,
@@ -538,6 +632,11 @@
             .video-indicators {
                 bottom: 1rem;
             }
+
+            .features h2,
+            .pricing h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -546,11 +645,16 @@
     <header>
         <nav class="container">
             <div class="logo">Smart Property Check</div>
-            <ul>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="privacy-policy.html">Privacy</a></li>
-                <li><a href="mailto:contact@bytethreadsllc.com">Contact</a></li>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="navMenu">
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="privacy-policy.html" class="nav-link">Privacy</a></li>
+                <li><a href="mailto:contact@bytethreadsllc.com" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -594,37 +698,37 @@
         <div class="container">
             <h2>Everything You Need for Professional Inspections</h2>
             <div class="feature-grid">
-                <div class="feature-card">
+                <div class="feature-card scroll-fade-in">
                     <div class="feature-icon">🎙️</div>
                     <h3>Voice-to-Text Transcription</h3>
                     <p>Walk through properties speaking your findings naturally. AI transcribes everything automatically—no more typing reports for hours after inspections.</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card scroll-fade-in">
                     <div class="feature-icon">📊</div>
                     <h3>Instant AI Reports</h3>
                     <p>Generate professional, client-ready inspection reports in seconds. Perfect for move-in/move-out inspections, routine checks, and pre-purchase assessments.</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card scroll-fade-in">
                     <div class="feature-icon">📄</div>
                     <h3>Beautiful PDF Exports</h3>
                     <p>Export branded PDFs with embedded photos and signature fields. Share instantly with tenants, landlords, or property owners via email or text.</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card scroll-fade-in">
                     <div class="feature-icon">☁️</div>
                     <h3>CloudKit Sync</h3>
                     <p>Access your entire inspection history across all devices. Perfect for property managers juggling multiple properties and team members.</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card scroll-fade-in">
                     <div class="feature-icon">✈️</div>
                     <h3>Works Offline</h3>
                     <p>Inspect properties in basements, garages, or areas with no signal. Everything syncs when you're back online.</p>
                 </div>
 
-                <div class="feature-card">
+                <div class="feature-card scroll-fade-in">
                     <div class="feature-icon">📸</div>
                     <h3>Photo & Video Documentation</h3>
                     <p>Capture unlimited time-stamped photos and videos. Protect yourself from disputes with comprehensive visual evidence organized by room.</p>
@@ -789,6 +893,74 @@
         "url": "https://smartpropertycheck.com"
       }
     }
+    </script>
+
+    <!-- Hamburger Menu Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.getElementById('navMenu');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Toggle menu
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navMenu.contains(event.target);
+                const isClickOnHamburger = hamburger.contains(event.target);
+
+                if (!isClickInsideNav && !isClickOnHamburger && navMenu.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollElements = document.querySelectorAll('.scroll-fade-in');
+
+            const elementInView = (el, percentageScroll = 80) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <=
+                    (window.innerHeight || document.documentElement.clientHeight) * (percentageScroll/100)
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('visible');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 85)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            // Initial check for elements in view on page load
+            handleScrollAnimation();
+        });
     </script>
 
     <!-- Video Cycling Script -->
