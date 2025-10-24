@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Privacy Policy for Smart Inspection Check - How we collect, use, and protect your data.">
+    <meta name="keywords" content="privacy policy, data protection, Smart Inspection Check, property inspection app">
+    <title>Privacy Policy - Smart Inspection Check</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        /* Back Link */
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 0;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        /* Main Content */
+        .content {
+            background: white;
+            margin: 2rem auto;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 900px;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .content h3 {
+            font-size: 1.4rem;
+            color: #764ba2;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .content ul, .content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .content strong {
+            color: #333;
+        }
+
+        .content a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        .content hr {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 2.5rem 0;
+        }
+
+        /* Warning/Notice Box */
+        .notice-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+
+        .notice-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-box strong {
+            color: #856404;
+        }
+
+        /* Summary Box */
+        .summary-box {
+            background: #f8f9fa;
+            border: 2px solid #667eea;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+        }
+
+        .summary-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom: none;
+            margin-top: 0;
+        }
+
+        .contact-section p {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .footer-section a {
+            color: #bbb;
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 1rem;
+            text-align: center;
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .content {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content h2 {
+                font-size: 1.5rem;
+            }
+
+            .content h3 {
+                font-size: 1.2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">Smart Inspect</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="mailto:contact@bytethreadsllc.com">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h1>Privacy Policy for Smart Inspection Check</h1>
+            <p class="last-updated"><strong>Last Updated:</strong> October 23, 2025</p>
+
+            <p>Smart Inspection Check ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your information when you use our iOS application.</p>
+
+            <hr>
+
+            <h2>Information We Collect</h2>
+
+            <h3>Data You Provide</h3>
+            <p>When using Smart Inspection Check, you create and store:</p>
+            <ul>
+                <li>Property information (addresses, tenant names, property types)</li>
+                <li>Inspection records (inspector name, inspection type, date)</li>
+                <li>Voice recordings and photos taken during inspections</li>
+                <li>Generated reports and notes</li>
+            </ul>
+
+            <h3>Automatically Collected Data</h3>
+            <ul>
+                <li>Device type and iOS version (for app functionality and support)</li>
+                <li>App version and build number</li>
+                <li>Crash reports and error logs (anonymous)</li>
+                <li>Usage statistics (anonymous, stored locally)</li>
+            </ul>
+
+            <h3>Data We DO NOT Collect</h3>
+            <ul>
+                <li>❌ Your name, email, or phone number (unless you contact support)</li>
+                <li>❌ Your location or GPS coordinates</li>
+                <li>❌ Your contacts or calendar</li>
+                <li>❌ Data from other apps</li>
+                <li>❌ Advertising identifiers</li>
+            </ul>
+
+            <hr>
+
+            <h2>How We Use Your Information</h2>
+
+            <h3>Primary Purpose</h3>
+            <p>Your data is used solely to provide the app's core functionality:</p>
+            <ul>
+                <li>Store and organize property inspections</li>
+                <li>Sync data across your devices via iCloud</li>
+                <li>Transcribe voice recordings to text</li>
+                <li>Generate AI-powered inspection reports</li>
+                <li>Export professional PDF reports</li>
+            </ul>
+
+            <h3>No Advertising or Tracking</h3>
+            <ul>
+                <li>We do NOT sell your data to third parties</li>
+                <li>We do NOT share data with advertisers</li>
+                <li>We do NOT track you across other apps or websites</li>
+                <li>We do NOT use your data for marketing purposes</li>
+            </ul>
+
+            <hr>
+
+            <h2>Third-Party Services</h2>
+
+            <p>To provide AI-powered features, we use the following third-party services:</p>
+
+            <h3>1. AssemblyAI (Voice Transcription)</h3>
+
+            <p><strong>What we send:</strong></p>
+            <ul>
+                <li>Audio recordings of your voice notes from inspections</li>
+            </ul>
+
+            <p><strong>Purpose:</strong></p>
+            <ul>
+                <li>Convert speech to text automatically</li>
+            </ul>
+
+            <p><strong>Data processing:</strong></p>
+            <ul>
+                <li>Audio is uploaded via encrypted HTTPS connection</li>
+                <li>AssemblyAI processes the audio and returns text</li>
+                <li>Audio files are deleted from AssemblyAI servers after processing</li>
+            </ul>
+
+            <p><strong>Data retention:</strong></p>
+            <ul>
+                <li>AssemblyAI does not store your audio long-term</li>
+                <li>Processed within minutes, then deleted</li>
+            </ul>
+
+            <p><strong>Privacy policy:</strong><br>
+            <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank">https://www.assemblyai.com/legal/privacy-policy</a></p>
+
+            <p><strong>Opt-out:</strong></p>
+            <ul>
+                <li>You can disable cloud transcription in Settings</li>
+                <li>Offline transcription uses on-device processing (no data sent)</li>
+            </ul>
+
+            <hr>
+
+            <h3>2. OpenAI (AI Report Generation)</h3>
+
+            <p><strong>What we send:</strong></p>
+            <ul>
+                <li>Transcribed text from your inspection voice notes</li>
+                <li>Room names and inspection metadata (e.g., "Kitchen", "Living Room")</li>
+            </ul>
+
+            <p><strong>What we DO NOT send:</strong></p>
+            <ul>
+                <li>❌ Property addresses</li>
+                <li>❌ Tenant names or personal information</li>
+                <li>❌ Photos or videos</li>
+                <li>❌ Your name or contact information</li>
+            </ul>
+
+            <p><strong>Purpose:</strong></p>
+            <ul>
+                <li>Generate professional, formatted inspection reports using AI</li>
+            </ul>
+
+            <p><strong>Data processing:</strong></p>
+            <ul>
+                <li>Transcribed text is sent to OpenAI's API via encrypted HTTPS</li>
+                <li>OpenAI's GPT-4 model generates a structured report</li>
+                <li>Report text is returned to your device</li>
+            </ul>
+
+            <p><strong>Data retention (per OpenAI's API policy):</strong></p>
+            <ul>
+                <li>API requests are NOT used to train OpenAI models</li>
+                <li>Data may be retained for 30 days for abuse and misuse monitoring</li>
+                <li>After 30 days, data is deleted from OpenAI servers</li>
+            </ul>
+
+            <p><strong>Privacy policy:</strong><br>
+            <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></p>
+
+            <p><strong>Opt-out:</strong></p>
+            <ul>
+                <li>You can skip AI report generation and write reports manually</li>
+            </ul>
+
+            <hr>
+
+            <h3>3. Apple iCloud (Data Synchronization)</h3>
+
+            <p><strong>What we store:</strong></p>
+            <ul>
+                <li>All property data, inspections, photos, and reports</li>
+                <li>Synced automatically across your Apple devices</li>
+            </ul>
+
+            <p><strong>How it works:</strong></p>
+            <ul>
+                <li>Data is stored in your personal iCloud account</li>
+                <li>Only accessible by you and devices signed into your iCloud</li>
+                <li>Encrypted in transit and at rest by Apple</li>
+            </ul>
+
+            <p><strong>Privacy:</strong></p>
+            <ul>
+                <li>We do NOT have access to your iCloud data</li>
+                <li>Apple's privacy policy applies: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+            </ul>
+
+            <p><strong>Opt-out:</strong></p>
+            <ul>
+                <li>You can disable iCloud sync in iOS Settings → iCloud</li>
+                <li>Data will remain local to your device only</li>
+            </ul>
+
+            <hr>
+
+            <h3>4. Apple StoreKit (Subscription Management)</h3>
+
+            <p><strong>What Apple processes:</strong></p>
+            <ul>
+                <li>Subscription purchases and renewals</li>
+                <li>Payment information (handled entirely by Apple)</li>
+            </ul>
+
+            <p><strong>What we receive:</strong></p>
+            <ul>
+                <li>Anonymous transaction receipts to verify subscription status</li>
+                <li>No payment details or personal information</li>
+            </ul>
+
+            <p><strong>Privacy:</strong></p>
+            <ul>
+                <li>All payment processing handled by Apple</li>
+                <li>We never see your credit card or payment information</li>
+            </ul>
+
+            <hr>
+
+            <h2>Data Storage and Security</h2>
+
+            <h3>Where Your Data Lives</h3>
+            <ul>
+                <li><strong>On your device:</strong> All data stored locally in the app's secure container</li>
+                <li><strong>In iCloud:</strong> Synced via Apple's CloudKit (encrypted by Apple)</li>
+                <li><strong>Third-party processing:</strong> Temporary processing by AssemblyAI and OpenAI (deleted after use)</li>
+            </ul>
+
+            <h3>Security Measures</h3>
+            <ul>
+                <li>✅ All network communication uses HTTPS encryption (TLS 1.2+)</li>
+                <li>✅ Data stored in app's sandboxed container (iOS security)</li>
+                <li>✅ iCloud data encrypted by Apple</li>
+                <li>✅ No data stored on our servers (we don't have servers)</li>
+                <li>✅ API keys secured in app binary</li>
+            </ul>
+
+            <h3>Data You Control</h3>
+            <p>You have complete control over your data:</p>
+            <ul>
+                <li>Edit or delete properties and inspections anytime</li>
+                <li>Export data as PDF or JSON</li>
+                <li>All deletions are immediate and permanent</li>
+                <li>Uninstalling the app deletes local data (iCloud data remains until you delete it)</li>
+            </ul>
+
+            <hr>
+
+            <h2>Your Privacy Rights</h2>
+
+            <h3>Access Your Data</h3>
+            <ul>
+                <li>All your data is visible within the app</li>
+                <li>Export inspections as PDF reports</li>
+                <li>Export analytics data as JSON (Developer Settings)</li>
+            </ul>
+
+            <h3>Delete Your Data</h3>
+            <p><strong>On device:</strong></p>
+            <ol>
+                <li>Delete individual properties/inspections in the app</li>
+                <li>Delete the app to remove all local data</li>
+            </ol>
+
+            <p><strong>In iCloud:</strong></p>
+            <ol>
+                <li>iOS Settings → Apple ID → iCloud → Manage Storage</li>
+                <li>Find "Smart Inspection Check"</li>
+                <li>Delete data</li>
+            </ol>
+
+            <p><strong>From third-party services:</strong></p>
+            <ul>
+                <li>AssemblyAI: Audio deleted automatically after transcription</li>
+                <li>OpenAI: Data deleted after 30 days per their policy</li>
+                <li>To request immediate deletion, contact support (see below)</li>
+            </ul>
+
+            <h3>Cancel Subscription</h3>
+            <ol>
+                <li>iOS Settings → Apple ID → Subscriptions</li>
+                <li>Select "Smart Inspection Check"</li>
+                <li>Tap "Cancel Subscription"</li>
+                <li>Your data remains accessible; only billing stops</li>
+            </ol>
+
+            <hr>
+
+            <h2>Children's Privacy</h2>
+
+            <p>Smart Inspection Check is not intended for use by children under 13. We do not knowingly collect information from children. If you believe a child has provided information through the app, please contact us immediately.</p>
+
+            <hr>
+
+            <h2>Data Retention</h2>
+
+            <h3>While Using the App</h3>
+            <ul>
+                <li>Data stored indefinitely on your device and iCloud (your choice)</li>
+            </ul>
+
+            <h3>After Uninstalling</h3>
+            <ul>
+                <li>Local data deleted immediately</li>
+                <li>iCloud data remains until you manually delete it</li>
+                <li>Subscription cancels when period ends (no auto-renewal)</li>
+            </ul>
+
+            <h3>Third-Party Retention</h3>
+            <ul>
+                <li><strong>AssemblyAI:</strong> Audio deleted after transcription (minutes)</li>
+                <li><strong>OpenAI:</strong> Text deleted after 30 days maximum</li>
+                <li><strong>Apple:</strong> Follows Apple's iCloud retention policy</li>
+            </ul>
+
+            <hr>
+
+            <h2>International Users and Data Transfers</h2>
+
+            <h3>Data Processing Locations</h3>
+            <ul>
+                <li><strong>Your device:</strong> Wherever you are located</li>
+                <li><strong>iCloud:</strong> Apple data centers (varies by your region)</li>
+                <li><strong>AssemblyAI:</strong> US-based servers</li>
+                <li><strong>OpenAI:</strong> US-based servers</li>
+            </ul>
+
+            <h3>GDPR Compliance (EU Users)</h3>
+            <p>If you are in the European Union:</p>
+            <ul>
+                <li>You have the right to access, correct, or delete your data</li>
+                <li>You have the right to data portability (export as PDF/JSON)</li>
+                <li>You have the right to object to processing</li>
+                <li>You have the right to withdraw consent (disable AI features)</li>
+            </ul>
+
+            <p>To exercise these rights, contact us at: <a href="mailto:contact@bytethreadsllc.com">contact@bytethreadsllc.com</a></p>
+
+            <h3>California Privacy Rights (CCPA)</h3>
+            <p>If you are a California resident:</p>
+            <ul>
+                <li>We do NOT sell your personal information</li>
+                <li>You have the right to know what data we collect</li>
+                <li>You have the right to delete your data</li>
+                <li>You have the right to opt-out of data sharing (disable AI features)</li>
+            </ul>
+
+            <hr>
+
+            <h2>Changes to This Privacy Policy</h2>
+
+            <p>We may update this Privacy Policy from time to time. When we do:</p>
+            <ul>
+                <li>The "Last Updated" date at the top will change</li>
+                <li>We will notify you via the app (if changes are significant)</li>
+                <li>Continued use of the app constitutes acceptance of changes</li>
+            </ul>
+
+            <p>You can always review the latest Privacy Policy at:</p>
+            <ul>
+                <li><a href="https://smartinspectioncheck.com/privacy-policy">https://smartinspectioncheck.com/privacy-policy</a></li>
+                <li>In-app: Settings → Privacy Policy</li>
+            </ul>
+
+            <hr>
+
+            <h2>AI-Generated Content Disclaimer</h2>
+
+            <div class="notice-box">
+                <p><strong>Important Notice</strong></p>
+                <p>Reports generated by AI (using OpenAI's technology) are created automatically based on your voice notes. While we strive for accuracy:</p>
+                <ul>
+                    <li>⚠️ AI-generated content may contain errors or inaccuracies</li>
+                    <li>⚠️ You are responsible for reviewing all reports before sharing</li>
+                    <li>⚠️ AI does not replace professional judgment</li>
+                    <li>⚠️ Always verify critical information</li>
+                </ul>
+                <p><strong>Recommendation:</strong> Treat AI reports as drafts that require human review.</p>
+            </div>
+
+            <hr>
+
+            <h2>Third-Party Links</h2>
+
+            <p>The app may contain links to third-party services (AssemblyAI, OpenAI, Apple). We are not responsible for the privacy practices of these services. Please review their privacy policies:</p>
+
+            <ul>
+                <li>AssemblyAI: <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank">https://www.assemblyai.com/legal/privacy-policy</a></li>
+                <li>OpenAI: <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></li>
+                <li>Apple: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></li>
+            </ul>
+
+            <hr>
+
+            <h2>Data Breach Notification</h2>
+
+            <p>In the unlikely event of a data breach affecting your information:</p>
+            <ul>
+                <li>We will notify you within 72 hours (if possible to identify affected users)</li>
+                <li>We will provide details about what data was affected</li>
+                <li>We will explain steps we're taking to resolve the issue</li>
+            </ul>
+
+            <p><strong>Note:</strong> Since we don't store data on servers, risk is minimal. Most data lives in your iCloud account (Apple's security responsibility).</p>
+
+            <hr>
+
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <p>If you have questions, concerns, or requests regarding this Privacy Policy or your data:</p>
+                <p><strong>Email:</strong> <a href="mailto:contact@bytethreadsllc.com">contact@bytethreadsllc.com</a></p>
+                <p><strong>Company:</strong> ByteThreads LLC</p>
+                <p><strong>Website:</strong> <a href="https://smartinspectioncheck.com" target="_blank">https://smartinspectioncheck.com</a></p>
+                <p><strong>Response time:</strong> We aim to respond within 48 hours</p>
+            </div>
+
+            <hr>
+
+            <h2>Your Consent</h2>
+
+            <p>By using Smart Inspection Check, you consent to:</p>
+            <ul>
+                <li>This Privacy Policy</li>
+                <li>Processing of voice recordings by AssemblyAI for transcription</li>
+                <li>Processing of transcribed text by OpenAI for report generation</li>
+                <li>Storage of your data in Apple iCloud (if enabled)</li>
+            </ul>
+
+            <p>You can withdraw consent at any time by:</p>
+            <ul>
+                <li>Disabling AI features in Settings</li>
+                <li>Disabling iCloud sync in iOS Settings</li>
+                <li>Deleting the app</li>
+            </ul>
+
+            <hr>
+
+            <div class="summary-box">
+                <h2>Summary (TL;DR)</h2>
+
+                <p><strong>What we collect:</strong></p>
+                <ul>
+                    <li>Property and inspection data you create</li>
+                    <li>Voice recordings and photos you take</li>
+                </ul>
+
+                <p><strong>What we do with it:</strong></p>
+                <ul>
+                    <li>Store on your device and iCloud (your choice)</li>
+                    <li>Send voice to AssemblyAI for transcription</li>
+                    <li>Send text to OpenAI for report generation</li>
+                    <li>Nothing else</li>
+                </ul>
+
+                <p><strong>What we DON'T do:</strong></p>
+                <ul>
+                    <li>❌ Sell your data</li>
+                    <li>❌ Show you ads</li>
+                    <li>❌ Track you across apps</li>
+                    <li>❌ Share with marketers</li>
+                    <li>❌ Store on our servers (we don't have any!)</li>
+                </ul>
+
+                <p><strong>Your control:</strong></p>
+                <ul>
+                    <li>You own all your data</li>
+                    <li>Delete anytime</li>
+                    <li>Export anytime</li>
+                    <li>Disable AI features anytime</li>
+                </ul>
+
+                <p><strong>Questions?</strong> Email <a href="mailto:contact@bytethreadsllc.com">contact@bytethreadsllc.com</a></p>
+            </div>
+
+            <hr>
+
+            <p style="text-align: center; margin-top: 2rem;">
+                <strong>Smart Inspection Check</strong> is a product of <strong>ByteThreads LLC</strong><br>
+                <strong>Last Updated:</strong> October 23, 2025 | <strong>Version:</strong> 1.0 | <strong>App Version:</strong> Smart Inspection Check v1.0
+            </p>
+
+            <p style="text-align: center; color: #888; margin-top: 1rem; font-size: 0.9rem;">
+                © 2025 ByteThreads LLC. All rights reserved.<br>
+                <em>This Privacy Policy is governed by the laws of the United States. By using this app, you agree to the jurisdiction of United States courts for any disputes.</em>
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="#">App Store (Coming Soon)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="mailto:contact@bytethreadsllc.com">Email Support</a></li>
+                        <li>Response time: 48 hours</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>ByteThreads LLC</li>
+                        <li><a href="mailto:contact@bytethreadsllc.com">contact@bytethreadsllc.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p><strong>Smart Inspection Check</strong> is a product of <strong>ByteThreads LLC</strong></p>
+                <p>© 2025 ByteThreads LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
