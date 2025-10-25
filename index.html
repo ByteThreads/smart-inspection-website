@@ -437,6 +437,51 @@
             margin: 0 auto;
         }
 
+        /* Pricing Tabs */
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 3rem;
+            background: #f0f0f0;
+            border-radius: 50px;
+            padding: 5px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pricing-tab {
+            flex: 1;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #666;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-tab:hover {
+            color: #5E80FF;
+        }
+
+        .pricing-tab.active {
+            background: white;
+            color: #5E80FF;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .pricing-plan {
+            display: none;
+        }
+
+        .pricing-plan.active {
+            display: grid;
+        }
+
         .pricing-card {
             background: white;
             padding: 2.5rem;
@@ -835,12 +880,20 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <h2>Pricing That Pays for Itself</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: #666; font-size: 1.1rem;">
+            <p style="text-align: center; margin-bottom: 2rem; color: #666; font-size: 1.1rem;">
                 Save 1-2 hours per inspection. Break even after just 1-2 inspections per month.
             </p>
-            <div class="pricing-grid">
+
+            <!-- Pricing Tabs -->
+            <div class="pricing-tabs">
+                <button class="pricing-tab active" data-plan="monthly">Monthly</button>
+                <button class="pricing-tab" data-plan="annual">Annual</button>
+            </div>
+
+            <!-- Monthly Plans -->
+            <div class="pricing-grid pricing-plan active" id="monthlyPlans">
                 <div class="pricing-card">
-                    <h3>Solo Monthly</h3>
+                    <h3>Solo</h3>
                     <div class="trial-badge">7-Day Free Trial</div>
                     <div class="price">$89<span>/month</span></div>
                     <p style="text-align: center; color: #666; margin: 1rem 0;">
@@ -859,8 +912,30 @@
                     </ul>
                 </div>
 
+                <div class="pricing-card">
+                    <h3>Team</h3>
+                    <div class="trial-badge" style="background: #FF9800;">Coming v1.1</div>
+                    <div class="price">$199<span>/month</span></div>
+                    <p style="text-align: center; color: #666; margin: 1rem 0;">
+                        <strong>Up to 6 team members</strong>
+                    </p>
+                    <ul>
+                        <li>Everything in Solo</li>
+                        <li>Multiple team members</li>
+                        <li>Shared properties & inspections</li>
+                        <li>Role-based permissions</li>
+                        <li>Team authentication</li>
+                        <li>Centralized billing</li>
+                        <li>Admin dashboard</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Annual Plans -->
+            <div class="pricing-grid pricing-plan" id="annualPlans">
                 <div class="pricing-card featured">
-                    <h3>Solo Annual</h3>
+                    <h3>Solo</h3>
                     <div class="trial-badge">7-Day Free Trial • Save $169/year</div>
                     <div class="price">$899<span>/year</span></div>
                     <p style="text-align: center; margin: 1rem 0;">
@@ -879,13 +954,12 @@
                     </ul>
                 </div>
 
-                <div class="pricing-card">
-                    <h3>Team Plan</h3>
-                    <div class="trial-badge" style="background: #FF9800;">Coming v1.1</div>
-                    <div class="price">$199<span>/month</span></div>
-                    <p style="text-align: center; color: #666; margin: 1rem 0;">
-                        <strong>Up to 6 team members</strong><br>
-                        Annual: $1,999/year (save $389)
+                <div class="pricing-card featured">
+                    <h3>Team</h3>
+                    <div class="trial-badge" style="background: #FF9800;">Coming v1.1 • Save $389/year</div>
+                    <div class="price">$1,999<span>/year</span></div>
+                    <p style="text-align: center; margin: 1rem 0;">
+                        <strong>Up to 6 team members</strong>
                     </p>
                     <ul>
                         <li>Everything in Solo</li>
@@ -1020,6 +1094,34 @@
                     hamburger.classList.remove('active');
                     navMenu.classList.remove('active');
                 }
+            });
+        });
+    </script>
+
+    <!-- Pricing Tabs Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.pricing-tab');
+            const monthlyPlans = document.getElementById('monthlyPlans');
+            const annualPlans = document.getElementById('annualPlans');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active to clicked tab
+                    this.classList.add('active');
+
+                    // Show/hide plans
+                    if (this.dataset.plan === 'monthly') {
+                        monthlyPlans.classList.add('active');
+                        annualPlans.classList.remove('active');
+                    } else {
+                        monthlyPlans.classList.remove('active');
+                        annualPlans.classList.add('active');
+                    }
+                });
             });
         });
     </script>
