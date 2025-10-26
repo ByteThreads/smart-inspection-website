@@ -47,6 +47,9 @@
     <!-- Web App Manifest -->
     <link rel="manifest" href="site.webmanifest">
 
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
         * {
             margin: 0;
@@ -401,8 +404,17 @@
         .feature-icon {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: transform 0.3s ease;
+        }
+
+        .feature-icon svg {
+            width: 56px;
+            height: 56px;
+            stroke: #5E80FF;
+            stroke-width: 1.5;
         }
 
         .feature-card:hover .feature-icon {
@@ -541,6 +553,7 @@
             left: 0;
             color: #4CAF50;
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
         .pricing-card.featured li:before {
@@ -750,11 +763,11 @@
         <!-- Content -->
         <div class="hero-content">
             <img src="app-icon.png" alt="Smart Property Check - AI-powered property inspection app icon" class="app-icon">
-            <div class="badge">🚀 AI-Powered Inspections • 7-Day Free Trial</div>
+            <div class="badge"><i data-lucide="sparkles" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle; margin-right: 4px;"></i>AI-Powered Inspections • 7-Day Free Trial</div>
             <h1>The First Property Inspection App<br>with AI Video Analysis</h1>
             <p>For property managers, inspectors, and landlords who need fast, professional reports</p>
             <p style="font-size: 1.2rem; margin-top: 1rem;">Record video → AI detects issues → AI writes your report → Sign & export PDF in 30 seconds</p>
-            <a href="#pricing" class="cta-button" aria-label="View pricing and start free trial">📱 Coming Soon to App Store</a>
+            <a href="#pricing" class="cta-button" aria-label="View pricing and start free trial"><i data-lucide="smartphone" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Coming Soon to App Store</a>
         </div>
 
         <!-- Video Indicators (will auto-populate based on videos) -->
@@ -767,55 +780,55 @@
             <h2>Everything You Need for Professional Inspections</h2>
             <div class="feature-grid">
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">🤖</div>
+                    <div class="feature-icon"><i data-lucide="bot"></i></div>
                     <h3>AI Video Analysis</h3>
                     <p><strong>Industry first:</strong> Record video walkthroughs and AI automatically detects issues like damage, wear, or maintenance needs. Save 30-50% inspection time with breakthrough technology.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">🎙️</div>
+                    <div class="feature-icon"><i data-lucide="mic"></i></div>
                     <h3>Voice-to-Text Transcription</h3>
                     <p>Walk through properties speaking your findings naturally. AI transcribes everything automatically—no more typing reports for hours after inspections.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><i data-lucide="file-text"></i></div>
                     <h3>AI-Powered Reports</h3>
                     <p>Generate professional, client-ready inspection reports in 30 seconds. AI writes detailed narratives from your notes, photos, and video evidence—competitors make you write it manually.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">✍️</div>
+                    <div class="feature-icon"><i data-lucide="pen-tool"></i></div>
                     <h3>Digital Signatures</h3>
                     <p>Collect inspector and tenant/landlord signatures on-device with timestamps. No printing, scanning, or mailing required. Professional signature boxes embedded in PDFs.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">📄</div>
+                    <div class="feature-icon"><i data-lucide="file-check"></i></div>
                     <h3>Professional PDF Export</h3>
                     <p>Export branded PDFs with embedded photos, video frames, and digital signatures. Share instantly with clients via email. Includes automatic date stamps and legal disclaimers.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">📸</div>
+                    <div class="feature-icon"><i data-lucide="camera"></i></div>
                     <h3>Unlimited Photos & Videos</h3>
                     <p>Capture time-stamped photos and HD videos with automatic organization by room. AI can extract issues directly from photos. Protect yourself from disputes with visual evidence.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">☁️</div>
+                    <div class="feature-icon"><i data-lucide="cloud"></i></div>
                     <h3>iCloud Sync</h3>
                     <p>Access your entire inspection history across all Apple devices. Automatic CloudKit sync with unlimited storage—no subscription fees or data limits like competitors charge.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">✈️</div>
+                    <div class="feature-icon"><i data-lucide="wifi-off"></i></div>
                     <h3>Fully Offline</h3>
                     <p>Inspect properties in basements, garages, parking structures, or rural areas with zero signal. Everything syncs automatically when back online. Never lose work.</p>
                 </div>
 
                 <div class="feature-card scroll-fade-in">
-                    <div class="feature-icon">📱</div>
+                    <div class="feature-icon"><i data-lucide="smartphone"></i></div>
                     <h3>Native iOS Excellence</h3>
                     <p>Built with SwiftUI for smooth, fast performance. Apple Pencil support for sketching issues. Haptic feedback for premium feel. No clunky web wrappers like competitors.</p>
                 </div>
@@ -834,29 +847,29 @@
             <div style="max-width: 900px; margin: 0 auto; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); padding: 3rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
                     <div>
-                        <h3 style="color: #5E80FF; margin-bottom: 1rem; font-size: 1.3rem;">🚀 Our Innovation</h3>
+                        <h3 style="color: #5E80FF; margin-bottom: 1rem; font-size: 1.3rem;"><i data-lucide="zap" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Our Innovation</h3>
                         <ul style="list-style: none; padding: 0;">
                             <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: #4CAF50; font-weight: bold;">✓</span>
+                                <i data-lucide="check" style="position: absolute; left: 0; color: #4CAF50; width: 18px; height: 18px; stroke-width: 3;"></i>
                                 AI video analysis (industry first)
                             </li>
                             <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: #4CAF50; font-weight: bold;">✓</span>
+                                <i data-lucide="check" style="position: absolute; left: 0; color: #4CAF50; width: 18px; height: 18px; stroke-width: 3;"></i>
                                 AI writes reports for you
                             </li>
                             <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: #4CAF50; font-weight: bold;">✓</span>
+                                <i data-lucide="check" style="position: absolute; left: 0; color: #4CAF50; width: 18px; height: 18px; stroke-width: 3;"></i>
                                 Voice transcription with AI
                             </li>
                             <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative;">
-                                <span style="position: absolute; left: 0; color: #4CAF50; font-weight: bold;">✓</span>
+                                <i data-lucide="check" style="position: absolute; left: 0; color: #4CAF50; width: 18px; height: 18px; stroke-width: 3;"></i>
                                 Native iOS (fast & smooth)
                             </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h3 style="color: #888; margin-bottom: 1rem; font-size: 1.3rem;">😞 Competitors</h3>
+                        <h3 style="color: #888; margin-bottom: 1rem; font-size: 1.3rem;"><i data-lucide="frown" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 8px;"></i>Competitors</h3>
                         <ul style="list-style: none; padding: 0;">
                             <li style="padding: 0.5rem 0; padding-left: 1.5rem; position: relative; color: #888;">
                                 <span style="position: absolute; left: 0; color: #f44336; font-weight: bold;">✗</span>
@@ -1239,6 +1252,9 @@
                 });
             }
         });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
     </script>
 </body>
 </html>
