@@ -449,9 +449,9 @@
 
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -516,7 +516,6 @@
         .pricing-card.featured {
             background: linear-gradient(135deg, #5E80FF 0%, #8C5EFF 100%);
             color: white;
-            transform: scale(1.05);
         }
 
         .pricing-card h3 {
@@ -699,10 +698,14 @@
                 padding: 1rem 2rem;
             }
 
-            .feature-grid,
-            .pricing-grid {
+            .feature-grid {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .pricing-card {
@@ -893,7 +896,7 @@
 
                 <div style="margin-top: 2rem; padding-top: 2rem; border-top: 2px solid rgba(94, 128, 255, 0.2); text-align: center;">
                     <p style="font-size: 1.1rem; color: #333; margin: 0;">
-                        <strong style="color: #5E80FF;">Same price as competitors ($89/month)</strong> but with breakthrough AI features that save you 1-2 hours per inspection.
+                        <strong style="color: #5E80FF;">Same price as competitors ($89.99/month)</strong> but with breakthrough AI features that save you 1-2 hours per inspection.
                     </p>
                 </div>
             </div>
@@ -904,8 +907,11 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <h2>Pricing That Pays for Itself</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: #666; font-size: 1.1rem;">
+            <p style="text-align: center; margin-bottom: 0.5rem; color: #666; font-size: 1.1rem;">
                 Save 1-2 hours per inspection. Break even after just 1-2 inspections per month.
+            </p>
+            <p style="text-align: center; margin-bottom: 2rem; color: #5E80FF; font-size: 1.2rem; font-weight: 600;">
+                ✨ 7-Day Free Trial • No Credit Card Required
             </p>
 
             <!-- Pricing Tabs -->
@@ -917,17 +923,17 @@
             <!-- Monthly Plans -->
             <div class="pricing-grid pricing-plan active" id="monthlyPlans">
                 <div class="pricing-card">
-                    <h3>Solo</h3>
-                    <div class="trial-badge">7-Day Free Trial</div>
-                    <div class="price">$89<span>/month</span></div>
+                    <h3>Starter</h3>
+                    <div class="price">$29.99<span>/month</span></div>
                     <p style="text-align: center; color: #666; margin: 1rem 0;">
-                        <strong>$1.80/unit/month</strong> for 50 units<br>
-                        <strong>$0.90/unit/month</strong> for 100 units
+                        Perfect for individual landlords
                     </p>
                     <ul>
-                        <li>Unlimited properties</li>
-                        <li>Unlimited inspections</li>
+                        <li>Up to 10 properties</li>
+                        <li>15 AI inspections/month</li>
+                        <li>Up to 5 custom templates</li>
                         <li>AI voice transcription</li>
+                        <li>AI video analysis</li>
                         <li>AI report generation</li>
                         <li>PDF export with photos</li>
                         <li>CloudKit sync</li>
@@ -937,9 +943,31 @@
                 </div>
 
                 <div class="pricing-card">
+                    <h3>Solo</h3>
+                    <div class="price">$89.99<span>/month</span></div>
+                    <p style="text-align: center; color: #666; margin: 1rem 0;">
+                        <strong>$1.80/unit/month</strong> for 50 units<br>
+                        <strong>$0.90/unit/month</strong> for 100 units
+                    </p>
+                    <ul>
+                        <li>Unlimited properties</li>
+                        <li>Unlimited inspections</li>
+                        <li>Unlimited templates</li>
+                        <li>AI voice transcription</li>
+                        <li>AI video analysis</li>
+                        <li>AI report generation</li>
+                        <li>Custom branding & logo</li>
+                        <li>PDF export with photos</li>
+                        <li>CloudKit sync</li>
+                        <li>Works offline</li>
+                        <li>Priority email support</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
                     <h3>Team</h3>
                     <div class="trial-badge" style="background: #FF9800;">Coming v1.1</div>
-                    <div class="price">$199<span>/month</span></div>
+                    <div class="price">$199.99<span>/month</span></div>
                     <p style="text-align: center; color: #666; margin: 1rem 0;">
                         <strong>Up to 6 team members</strong>
                     </p>
@@ -958,19 +986,47 @@
 
             <!-- Annual Plans -->
             <div class="pricing-grid pricing-plan" id="annualPlans">
-                <div class="pricing-card featured">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$299.99<span>/year</span></div>
+                    <p style="text-align: center; margin: 1rem 0; color: #4CAF50; font-weight: 600;">
+                        Save $60/year
+                    </p>
+                    <p style="text-align: center; color: #666; margin: 1rem 0;">
+                        Perfect for individual landlords
+                    </p>
+                    <ul>
+                        <li>Up to 10 properties</li>
+                        <li>15 AI inspections/month</li>
+                        <li>Up to 5 custom templates</li>
+                        <li>AI voice transcription</li>
+                        <li>AI video analysis</li>
+                        <li>AI report generation</li>
+                        <li>PDF export with photos</li>
+                        <li>CloudKit sync</li>
+                        <li>Works offline</li>
+                        <li>Email support</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card">
                     <h3>Solo</h3>
-                    <div class="trial-badge">7-Day Free Trial • Save $169/year</div>
-                    <div class="price">$899<span>/year</span></div>
-                    <p style="text-align: center; margin: 1rem 0;">
+                    <div class="price">$899.99<span>/year</span></div>
+                    <p style="text-align: center; margin: 1rem 0; color: #4CAF50; font-weight: 600;">
+                        Save $169/year
+                    </p>
+                    <p style="text-align: center; color: #666; margin: 1rem 0;">
                         <strong>$1.50/unit/month</strong> for 50 units<br>
                         <strong>$0.75/unit/month</strong> for 100 units
                     </p>
                     <ul>
                         <li>Unlimited properties</li>
                         <li>Unlimited inspections</li>
+                        <li>Unlimited templates</li>
                         <li>AI voice transcription</li>
+                        <li>AI video analysis</li>
                         <li>AI report generation</li>
+                        <li>Custom branding & logo</li>
                         <li>PDF export with photos</li>
                         <li>CloudKit sync</li>
                         <li>Works offline</li>
@@ -978,11 +1034,14 @@
                     </ul>
                 </div>
 
-                <div class="pricing-card featured">
+                <div class="pricing-card">
                     <h3>Team</h3>
-                    <div class="trial-badge" style="background: #FF9800;">Coming v1.1 • Save $389/year</div>
-                    <div class="price">$1,999<span>/year</span></div>
-                    <p style="text-align: center; margin: 1rem 0;">
+                    <div class="trial-badge" style="background: #FF9800;">Coming v1.1</div>
+                    <div class="price">$1,999.99<span>/year</span></div>
+                    <p style="text-align: center; margin: 1rem 0; color: #4CAF50; font-weight: 600;">
+                        Save $389/year
+                    </p>
+                    <p style="text-align: center; color: #666; margin: 1rem 0;">
                         <strong>Up to 6 team members</strong>
                     </p>
                     <ul>
@@ -1058,11 +1117,11 @@
       "operatingSystem": "iOS",
       "offers": {
         "@type": "Offer",
-        "price": "89",
+        "price": "89.99",
         "priceCurrency": "USD",
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
-          "price": "89",
+          "price": "89.99",
           "priceCurrency": "USD",
           "billingDuration": "P1M",
           "name": "Solo Monthly"
