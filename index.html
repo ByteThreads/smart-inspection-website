@@ -720,6 +720,102 @@
             .pricing h2 {
                 font-size: 2rem;
             }
+
+            .demo-content {
+                flex-direction: column;
+            }
+
+            .demo-text,
+            .demo-video-container {
+                flex: none;
+                width: 100%;
+            }
+
+            .demo-text {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .demo-features {
+                justify-content: center;
+            }
+        }
+
+        /* Demo Section */
+        .demo-section {
+            background: white;
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+
+        .demo-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .demo-text {
+            flex: 1;
+        }
+
+        .demo-text h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .demo-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .demo-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .demo-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .demo-features li i {
+            color: #5E80FF;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+        }
+
+        .demo-video-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .demo-video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            background: #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            aspect-ratio: 9 / 19.5;
+        }
+
+        .demo-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            background: #000;
         }
     </style>
 </head>
@@ -775,6 +871,32 @@
 
         <!-- Video Indicators (will auto-populate based on videos) -->
         <div class="video-indicators"></div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2>See It In Action</h2>
+                    <p class="demo-subtitle">Watch how Smart Property Check transforms property inspections</p>
+                    <ul class="demo-features">
+                        <li><i data-lucide="check-circle"></i> Record walkthrough videos with narration</li>
+                        <li><i data-lucide="check-circle"></i> AI automatically detects damage and issues</li>
+                        <li><i data-lucide="check-circle"></i> Generate professional reports in seconds</li>
+                        <li><i data-lucide="check-circle"></i> Export and share PDF instantly</li>
+                    </ul>
+                </div>
+                <div class="demo-video-container">
+                    <div class="demo-video-wrapper">
+                        <video class="demo-video" controls playsinline poster="demo-thumbnail.jpg">
+                            <source src="demo-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Features Section -->
