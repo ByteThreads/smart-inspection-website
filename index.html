@@ -1527,9 +1527,9 @@
             let milestone75 = false;
             let videoCompleted = false;
 
-            // Set video to start at 50% when metadata is loaded
+            // Set video volume to 50% when metadata is loaded
             demoVideo.addEventListener('loadedmetadata', function() {
-                demoVideo.currentTime = demoVideo.duration * 0.5;
+                demoVideo.volume = 0.5;
             });
 
             // Track video play
