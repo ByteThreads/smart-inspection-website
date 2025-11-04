@@ -762,12 +762,28 @@
             font-size: 2.5rem;
             color: #333;
             margin-bottom: 1rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .demo-text h2.animate-in {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .demo-subtitle {
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s;
+        }
+
+        .demo-subtitle.animate-in {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .demo-features {
@@ -783,6 +799,30 @@
             gap: 0.75rem;
             font-size: 1.1rem;
             color: #444;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .demo-features li:nth-child(1) {
+            transition-delay: 0.3s;
+        }
+
+        .demo-features li:nth-child(2) {
+            transition-delay: 0.4s;
+        }
+
+        .demo-features li:nth-child(3) {
+            transition-delay: 0.5s;
+        }
+
+        .demo-features li:nth-child(4) {
+            transition-delay: 0.6s;
+        }
+
+        .demo-features li.animate-in {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .demo-features li i {
@@ -1438,6 +1478,131 @@
 
         // Initialize Lucide icons
         lucide.createIcons();
+    </script>
+
+    <!-- Demo Section Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const demoSection = document.querySelector('.demo-section');
+
+            if (demoSection) {
+                const demoTitle = demoSection.querySelector('h2');
+                const demoSubtitle = demoSection.querySelector('.demo-subtitle');
+                const demoFeatures = demoSection.querySelectorAll('.demo-features li');
+
+                const observerOptions = {
+                    threshold: 0.2,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Animate elements in sequence
+                            if (demoTitle) demoTitle.classList.add('animate-in');
+                            if (demoSubtitle) demoSubtitle.classList.add('animate-in');
+                            demoFeatures.forEach(li => li.classList.add('animate-in'));
+
+                            // Stop observing after animation triggers
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                observer.observe(demoSection);
+            }
+        });
+    </script>
+
+    <!-- Video Analytics Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const demoVideo = document.querySelector('.demo-video');
+
+            if (!demoVideo) return;
+
+            let videoStarted = false;
+            let milestone25 = false;
+            let milestone50 = false;
+            let milestone75 = false;
+            let videoCompleted = false;
+
+            // Track video play
+            demoVideo.addEventListener('play', function() {
+                if (!videoStarted) {
+                    gtag('event', 'video_start', {
+                        'event_category': 'Demo Video',
+                        'event_label': 'User started watching demo video',
+                        'value': 1
+                    });
+                    videoStarted = true;
+                }
+            });
+
+            // Track video pause
+            demoVideo.addEventListener('pause', function() {
+                const percentWatched = Math.round((demoVideo.currentTime / demoVideo.duration) * 100);
+                gtag('event', 'video_pause', {
+                    'event_category': 'Demo Video',
+                    'event_label': 'Video paused at ' + percentWatched + '%',
+                    'value': percentWatched
+                });
+            });
+
+            // Track viewing milestones
+            demoVideo.addEventListener('timeupdate', function() {
+                const percentWatched = (demoVideo.currentTime / demoVideo.duration) * 100;
+
+                if (percentWatched >= 25 && !milestone25) {
+                    gtag('event', 'video_progress', {
+                        'event_category': 'Demo Video',
+                        'event_label': '25% watched',
+                        'value': 25
+                    });
+                    milestone25 = true;
+                }
+
+                if (percentWatched >= 50 && !milestone50) {
+                    gtag('event', 'video_progress', {
+                        'event_category': 'Demo Video',
+                        'event_label': '50% watched',
+                        'value': 50
+                    });
+                    milestone50 = true;
+                }
+
+                if (percentWatched >= 75 && !milestone75) {
+                    gtag('event', 'video_progress', {
+                        'event_category': 'Demo Video',
+                        'event_label': '75% watched',
+                        'value': 75
+                    });
+                    milestone75 = true;
+                }
+            });
+
+            // Track video completion
+            demoVideo.addEventListener('ended', function() {
+                if (!videoCompleted) {
+                    gtag('event', 'video_complete', {
+                        'event_category': 'Demo Video',
+                        'event_label': 'User watched entire demo video',
+                        'value': 100
+                    });
+                    videoCompleted = true;
+                }
+            });
+
+            // Track if user clicks to fullscreen
+            demoVideo.addEventListener('fullscreenchange', function() {
+                if (document.fullscreenElement) {
+                    gtag('event', 'video_fullscreen', {
+                        'event_category': 'Demo Video',
+                        'event_label': 'User opened video in fullscreen'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
